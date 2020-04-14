@@ -66,7 +66,6 @@ async function translate(toLang='en') {
     const result = await transl([text], {tld: 'cn', to: toLang});
     loading.stop();
     const [resText, resLang] = result.data;
-    console.log('\n');
     console.log(chalk.green(resText));
   } catch (e) {
     loading.stop();
